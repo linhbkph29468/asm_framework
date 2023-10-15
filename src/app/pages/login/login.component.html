@@ -1,0 +1,35 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
+    <div class="mb-3">
+        <input type="text" formControlName="name" placeholder="Name" />
+    </div>
+
+    <div class="mb-3">
+        <input type="email" formControlName="email" placeholder="Email" />
+        <div class="error" *ngIf="
+                formLogin.get('email')?.hasError('required') &&
+                (formLogin.get('email')?.touched ||
+                    formLogin.get('email')?.dirty)
+            ">
+            Email required
+        </div>
+    </div>
+    <div class="mb-3">
+        <input type="password" formControlName="password" placeholder="Password" />
+        <div class="error" *ngIf="
+                formLogin.get('password')?.hasError('required') &&
+                  (formLogin.get('password')?.touched ||
+                    formLogin.get('password')?.dirty)
+            ">
+            Password required
+        </div>
+        <div class="error" *ngIf="
+                formLogin.get('password')?.hasError('minlength') &&
+                (formLogin.get('password')?.touched ||
+                    formLogin.get('password')?.dirty)
+            ">
+            Bạn phải nhập ít nhất 6 ký tự
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" routerLink="/signup">Login</button>
+</form>

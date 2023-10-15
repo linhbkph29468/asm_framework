@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "name": "Chó Husky màu đen",
+      "price": "4000000000",
+      "desc": "chó",
+      "id": 1,
+      "image": "https://picsum.photos/120/100"
+    },
+    {
+      "name": "Mèo",
+      "price": "2000000",
+      "desc": "Mèo anh lông ngắn",
+      "imageURL": "",
+      "id": 4,
+      "image": "https://picsum.photos/120"
+    },
+    {
+      "name": "Điện thoại",
+      "price": "24000000",
+      "desc": "Ip 11",
+      "image": "https://picsum.photos/150/100",
+      "id": 5
+    }
+  ]
+}
